@@ -2,6 +2,7 @@ import Header from '../Header/Header'
 import Hero from '../Hero/Hero'
 import Services from '../Services/Services'
 import Footer from '../Footer/Footer'
+import WorkingProcess from '../WorkingProgress/WorkingPogress'
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         <Header/>
         <Hero/>
         <Services/>
+        <WorkingProcess/>
         <Footer/>
         
         

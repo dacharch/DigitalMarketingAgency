@@ -1,6 +1,11 @@
 import React from "react";
 import "./Footer.css";
-import { FaFacebookF, FaTwitter, FaGooglePlusG, FaLinkedinIn, FaInstagram, FaPaperPlane, FaAngleUp } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaAngleUp
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,25 +17,53 @@ const Footer = () => {
           <div className="col-md-12 col-lg-4">
             <div className="tw-footer-info-box">
               <a href="/" className="footer-logo">
-                <img src="/images/footer_logo.png" alt="footer_logo" className="img-fluid" />
+                <img
+                  src="/images/footer_logo.png"
+                  alt="My Work Media Logo"
+                  className="img-fluid"
+                />
               </a>
+
               <p className="footer-info-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                My Work Media — crafting powerful digital strategies
+                that turn brands into market leaders.
               </p>
 
               <div className="footer-social-link">
                 <h3>Follow us</h3>
                 <ul>
-                  <li><a href="#"><FaFacebookF /></a></li>
-                  <li><a href="#"><FaTwitter /></a></li>
-                  <li><a href="#"><FaGooglePlusG /></a></li>
-                  <li><a href="#"><FaLinkedinIn /></a></li>
-                  <li><a href="#"><FaInstagram /></a></li>
+                  <li>
+                    <a
+                      href="https://facebook.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaFacebookF />
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedinIn />
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.instagram.com/my_work_media"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaInstagram />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
-
-           
           </div>
 
           {/* Right Side */}
@@ -42,8 +75,10 @@ const Footer = () => {
                 <div className="contact-us">
                   <div className="contact-icon">📍</div>
                   <div className="contact-info">
-                    <h3>New York, USA</h3>
-                    <p>1010 Grand Avenue</p>
+                    <h3>Noida, Uttar Pradesh, India</h3>
+                    <p>
+                      Basement Office No-12, A-64, Sector 4, 201301
+                    </p>
                   </div>
                 </div>
               </div>
@@ -52,47 +87,37 @@ const Footer = () => {
                 <div className="contact-us contact-us-last">
                   <div className="contact-icon">📞</div>
                   <div className="contact-info">
-                    <h3>009-215-5596</h3>
+                    <h3>
+                      <a href="#">
+                        +91 9220145333
+                      </a>
+                    </h3>
                     <p>Give us a call</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Links + Subscribe */}
+            {/* Links */}
             <div className="row">
               <div className="col-md-12 col-lg-6">
                 <div className="footer-widget footer-left-widget">
                   <h3>Useful Links</h3>
+
                   <div className="footer-links">
                     <ul>
-                      <li><a href="#">About us</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Projects</a></li>
-                      <li><a href="#">Our Team</a></li>
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/about">About Us</a></li>
+                      <li><a href="/services">Services</a></li>
                     </ul>
+
                     <ul>
-                      <li><a href="#">Contact us</a></li>
-                      <li><a href="#">Blog</a></li>
-                      <li><a href="#">Testimonials</a></li>
-                      <li><a href="#">FAQ</a></li>
+                      <li><a href="/projects">Projects</a></li>
+                      <li><a href="/contact">Contact Us</a></li>
+                      <li><a href="/privacy-policy">Privacy Policy</a></li>
                     </ul>
                   </div>
-                </div>
-              </div>
 
-              <div className="col-md-12 col-lg-6">
-                <div className="footer-widget">
-                  <h3>Subscribe</h3>
-                  <p>Don’t miss our updates. Enter your email below.</p>
-                  <form>
-                    <div className="footer-form">
-                      <input type="email" placeholder="Email Address" />
-                      <button type="submit">
-                        <FaPaperPlane />
-                      </button>
-                    </div>
-                  </form>
                 </div>
               </div>
             </div>
@@ -106,15 +131,18 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <span>© 2026 All Rights Reserved</span>
+              <span>
+                © {new Date().getFullYear()} My Work Media. All Rights Reserved.
+              </span>
             </div>
+
             <div className="col-md-6">
               <div className="copyright-menu">
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Terms</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/terms">Terms</a></li>
+                  <li><a href="/privacy-policy">Privacy</a></li>
+                  <li><a href="/contact">Contact</a></li>
                 </ul>
               </div>
             </div>
@@ -122,9 +150,13 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Back to Top */}
+      {/* Back To Top */}
       <div className="back-to-top">
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <button
+          onClick={() =>
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }
+        >
           <FaAngleUp />
         </button>
       </div>
